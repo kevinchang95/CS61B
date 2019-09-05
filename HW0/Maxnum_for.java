@@ -2,12 +2,12 @@ public class Maxnum {
 	
 	public static int max(int[] m){
 
-		int i = 0;
+		int i;
 
-		int n = 0;
+		
 		int maxnum = 0;
 
-		while(i < m.length){
+		for(i = 0; i < m.length; i=i+1){
 
 			if(m[i] > maxnum){
 				maxnum=m[i];
