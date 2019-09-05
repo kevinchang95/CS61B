@@ -1,4 +1,4 @@
-public class Maxnum {
+public class Maxnum_for {
 	
 	public static int max(int[] m){
 
