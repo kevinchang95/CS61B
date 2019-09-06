@@ -1,12 +1,18 @@
 public class DogLauncher{
 	public static void main(String[] args){
-		Dog d = new Dog(20) ;
-		
+		//Dog d = new Dog(20) ;
 		//d.WeightInPounds = 50;
 		
-		d.makeNoise();
+		Dog smallDog;				//Declaration of a Dog variable
+		new Dog(20);				//Instantiation of the Dog class as a Dog Object!
+		smallDog = new Dog(5);		//Instantiation and assignment
+		Dog HugeDog = new Dog(150);	//Declaration,Instantiation and assignment
+		
+		smallDog.makeNoise();
+		LargeDog.makeNoise();
 		
 		
+		//d.makeNoise();
 		//Dog.makeNoise();
 	}
 }
