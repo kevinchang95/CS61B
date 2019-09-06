@@ -17,8 +17,8 @@ public class DogLauncher{
 		//Dog.makeNoise();
 		
 		Dog[] dogs= new Dog[2];
-		dogs[0] = Dog(20);
-		dogs[1] = Dog(150);
+		dogs[0] = new Dog(20);
+		dogs[1] = new Dog(150);
 		dogs[0].makeNoise();
 		dogs[0].classification();
 		dogs[1].makeNoise();
