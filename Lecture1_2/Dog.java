@@ -3,6 +3,11 @@ public class Dog{
 	public int WeightInPounds;
 	public String dogType;
 	
+	public Dog(int w){
+		WeightInPounds = w;			//This is a constructor!!
+	}
+	
+	
 	
 	public void makeNoise(){
 		if(WeightInPounds<10){
