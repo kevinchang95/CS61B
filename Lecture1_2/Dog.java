@@ -1,11 +1,11 @@
 public class Dog{
 	
-	public int WeightInPounds;		//Instance Variable
+	public int WeightInPounds;				//Instance Variable
 	public String dogType;
 	
 	public Dog(int w){
-		WeightInPounds = w;			//This is a constructor!!
-	}								//Determines how to instantiate the class.
+		WeightInPounds = w;					//This is a constructor!!
+	}										//Determines how to instantiate the class.
 	
 	
 	
@@ -30,3 +30,7 @@ public class Dog{
         System.out.println("This is a " + dogType);
 		
 	}		
+	
+	
+	
+}

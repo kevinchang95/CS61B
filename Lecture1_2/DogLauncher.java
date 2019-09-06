@@ -9,8 +9,9 @@ public class DogLauncher{
 		Dog HugeDog = new Dog(150);	//Declaration,Instantiation and assignment
 		
 		smallDog.makeNoise();
+		smallDog.classification();
 		LargeDog.makeNoise();
-		
+		LargeDog.classification();
 		
 		//d.makeNoise();
 		//Dog.makeNoise();
