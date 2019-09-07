@@ -32,5 +32,12 @@ public class Dog{
 	}		
 	
 	
+	public static Dog maxDog(Dog d1, Dog d2){
+		if (d1.WeightInPounds > d2.WeightInPounds){
+			return d1;
+		}
+		return d2;
+	}
+	
 	
 }
