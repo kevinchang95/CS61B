@@ -10,7 +10,9 @@ public class Dog{
 		WeightInPounds = w;					//This is a constructor!!
 	}										//Determines how to instantiate the class.
 	
-	
+	public Dog(){
+											//This is a empty constructor!!
+	}										
 	
 	public void makeNoise(){				//Non-static Method (Instance method)
 		if(WeightInPounds<10){				//If the method is going to be invoked by
