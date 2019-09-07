@@ -24,8 +24,13 @@ public class DogLauncher{
 		dogs[1].makeNoise();
 		dogs[1].classification();
 		
-		Dog.maxDog(dogs[0],dogs[1]);
 		
+		
+		Dog thatmaxdog = new Dog();
+		thatmaxdog = Dog.maxDog(dogs[0],dogs[1]);
+		thatmaxdog.makeNoise();
+		
+		System.out.println(Dog.binomen);
 		
 	}
 }

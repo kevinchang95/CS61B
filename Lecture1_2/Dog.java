@@ -2,6 +2,9 @@ public class Dog{
 	
 	public int WeightInPounds;				//Instance Variable
 	public String dogType;
+	public static String binomen= "Canis Familiaris";
+	
+	
 	
 	public Dog(int w){
 		WeightInPounds = w;					//This is a constructor!!
@@ -32,13 +35,21 @@ public class Dog{
 	}		
 	
 	
-	public static Dog maxDog(Dog d1, Dog d2){
+	public static Dog maxDog(Dog d1, Dog d2){				//Static method
 		if (d1.WeightInPounds > d2.WeightInPounds){
 			System.out.println("The max dog is first dog");
 			return d1;
 		}
 		System.out.println("The max dog is second dog");
 		return d2;
+	
+
+	
+	
+	
+	
+	
+	
 	}
 	
 	
