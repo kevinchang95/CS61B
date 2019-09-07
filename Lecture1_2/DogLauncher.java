@@ -24,7 +24,7 @@ public class DogLauncher{
 		dogs[1].makeNoise();
 		dogs[1].classification();
 		
-		Dog.maxdog(dogs[0],dogs[1]);
+		Dog.maxDog(dogs[0],dogs[1]);
 		
 		
 	}
