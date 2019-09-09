@@ -4,7 +4,7 @@
 	public double xxVel;				//Its current velocity in x direction
 	public double yyVel;				//Its current velocity in y direction
 	public double mass;					//Its mass
-	public String imgFilename;			//The name of the file that corresponds to the image that depicts the body
+	public String imgFileName;			//The name of the file that corresponds to the image that depicts the body
 	
 	
 	public Body(double xP, double yP,double xV, 
@@ -14,7 +14,7 @@
 		xxVel = xV;
 		yyVel = yV;
 		mass  = m;
-		imgFilename = img;	
+		imgFileName = img;	
 	}
 	
 	
@@ -25,7 +25,7 @@
 		xxVel = b.xxVel;
 		yyVel = b.yyVel;
 		mass  = b.mass;
-		imgFilename = b.imgFilename;			
+		imgFileName = b.imgFileName;			
 		
 		
 	}
