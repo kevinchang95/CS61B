@@ -63,8 +63,74 @@
 	}
  
  
+	public double calcForceExertedByX(Body b){
+		double Force;
+		double ForceX;
+		double xxPos1 = b.xxPos;
+		double d;
+		
+		Force = this.calcForceExertedBy(b);
+		  d   = this.calcDistance(b);
+		
+		
+		ForceX = Force*(xxPos1-xxPos)/d;
+		
+		return ForceX;
+		
+ 	}
+ 
+	public double calcForceExertedByY(Body b){
+		double Force;
+		double ForceY;
+		double yyPos1 = b.yyPos;
+		double d;
+		
+		Force = this.calcForceExertedBy(b);
+		  d   = this.calcDistance(b);
+		
+		
+		ForceY = Force*(yyPos1-yyPos)/d;
+		
+		return ForceY;
+		
+ 	}
  
  
+	public double calcNetForceExertedByX(Body[] bs){
+		double NetForceX = 0;
+		double ForceX;
+		
+		for(Body b : bs){
+			
+			if (b == this){
+				continue;
+			}
+			
+			ForceX = this.calcForceExertedByX(b);
+			NetForceX = NetForceX + ForceX;
+	
+		}
+	
+		return NetForceX;
+	
+	}
+ 
+	public double calcNetForceExertedByY(Body[] bs){
+		double NetForceY = 0;
+		double ForceY;
+		
+		for(Body b : bs){
+			if (this == b){
+				continue;
+			}
+			ForceY = this.calcForceExertedByY(b);
+			NetForceY = NetForceY + ForceY;
+	
+		}
+	
+		return NetForceY;
+	
+	}
  
  
  
