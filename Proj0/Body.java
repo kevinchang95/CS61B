@@ -32,7 +32,15 @@
  
  
  
- 
+	public double calcDistance(Body b){
+		double xxPos1 = b.xxPos;
+		double yyPos1 = b.yyPos;
+		
+		double d = Math.sqrt((xxPos1-xxPos)*(xxPos1-xxPos)+(yyPos1-yyPos)*(yyPos1-yyPos));
+		
+		return d;
+		
+	}
  
  
  
