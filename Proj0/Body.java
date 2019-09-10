@@ -7,7 +7,7 @@
 	public String imgFileName;					//The name of the file that corresponds to the image that depicts the body
 	public static double G = 6.67 * Math.pow(10,-11);	//Cavendish gravitational constant
 	
-	public Body(double xP, double yP,double xV, 
+	public Body(double xP, double yP,double xV, 		//First constructor, defining all parameters
 				double yV, double m, String img){
 		xxPos = xP;
 		yyPos = yP;
@@ -18,7 +18,7 @@
 	}
 	
 	
-	public Body(Body b){
+	public Body(Body b){								//Second constructor, make a clone for selected bodyf
 		
 		xxPos = b.xxPos;
 		yyPos = b.yyPos;
@@ -134,7 +134,20 @@
 	
 	}
  
- 
+	public void update(double dt, double ForceX, double ForceY){
+		double accX;
+		double accY;
+		
+		accX = ForceX/mass;
+		accY = ForceY/mass;
+		
+		xxVel = xxVel + accX * dt;
+		yyVel = yyVel + accY * dt;
+		
+		xxPos = xxPos + xxVel * dt;
+		yyPos = yyPos + yyVel * dt;
+	
+	}
  
  }
  
