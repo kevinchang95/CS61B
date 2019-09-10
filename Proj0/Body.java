@@ -102,7 +102,8 @@
 		
 		for(Body b : bs){
 			
-			if (b == this){
+			// if (b == this){
+			if (b.equals(this)){				//Try another type of equal
 				continue;
 			}
 			
@@ -120,7 +121,8 @@
 		double ForceY;
 		
 		for(Body b : bs){
-			if (this == b){
+			// if (this == b){
+			if(b.equals(this)){
 				continue;
 			}
 			ForceY = this.calcForceExertedByY(b);
