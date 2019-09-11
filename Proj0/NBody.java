@@ -47,12 +47,12 @@ public class NBody{
 			planets[i] = b;
 			
 						
-			System.out.println(planets[i].xxPos);
-			System.out.println(planets[i].yyPos);
-			System.out.println(planets[i].xxVel);
-			System.out.println(planets[i].yyVel);
-			System.out.println(planets[i].mass);
-			System.out.println(planets[i].imgFileName);
+			// System.out.println(planets[i].xxPos);
+			// System.out.println(planets[i].yyPos);
+			// System.out.println(planets[i].xxVel);
+			// System.out.println(planets[i].yyVel);
+			// System.out.println(planets[i].mass);
+			// System.out.println(planets[i].imgFileName);
 		}
 		
 		
