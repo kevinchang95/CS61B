@@ -19,13 +19,15 @@ public class NBody{
 		int numofBody = in.readInt();
 		double Radius = in.readDouble();
 		Body[] planets = new Body[numofBody];
-		Body b = new Body(0,0,0,0,0," ");
+		
 		
 		
 		// System.out.println(numofBody);
 		// System.out.println(Radius);
 		
 		for(int i = 0;i < numofBody; i = i + 1){
+			
+			Body b = new Body(0,0,0,0,0," ");
 			
 			// planets[i].xxPos = in.readDouble(); 
 			// planets[i].yyPos = in.readDouble();
