@@ -36,6 +36,7 @@ public class TestReadBodies {
         boolean foundVenus = false;
         boolean randomChecksOkay = true;
         for (Body p : actualOutput) {
+			System.out.println(p.imgFileName);
             if ("earth.gif".equals(p.imgFileName)) {
                 foundEarth = true;
                 if (!doubleEquals(p.xxPos, 1.4960e+11, 0.01)) {
