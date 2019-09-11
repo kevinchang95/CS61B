@@ -1,5 +1,5 @@
 public class NBody{
-	
+	public static String imageToDraw = "images/starfield.jpg";
 	
 	public static double readRadius(String fileName){
 		
@@ -69,13 +69,28 @@ public class NBody{
 		double Radius;
 		Body[] Bodies;
 		
+		
 		Radius = NBody.readRadius(fileName);
 		Bodies = NBody.readBodies(fileName);
 		
 		
+		// System.out.println("T is "+ T);						//Test passed for fetching data!
+		// System.out.println("dt is "+ dt);
+		// System.out.println("Radius is " + Radius);
+		// System.out.println("First body's image name is "+ Bodies[0].imgFileName);
 		
-	
+		
+		
+		
+		StdDraw.enableDoubleBuffering();			//Set scale as (-Radius,Radius)!!
+		StdDraw.setScale(-1*Radius, Radius);
+		StdDraw.clear();
+		// StdDraw.picture(0, 0, imageToDraw, 1, 1);
+		StdDraw.picture(0, 0, imageToDraw, 2*Radius, 2*Radius);		//Set image to fill the whole screen!
+		StdDraw.show();
 	}
 	
+	
+		
 
 }
