@@ -151,10 +151,10 @@
  
  
  
-	public void draw(){
+	public void draw(double Radius){
 		String imageToDraw = "images/"+imgFileName;
 		
-		StdDraw.picture(xxPos,yyPos, imageToDraw);		//Set image to fill the whole screen!
+		StdDraw.picture(xxPos,yyPos, imageToDraw,0.2*Radius,0.2*Radius);		//Set image to fill the whole screen!
 		// StdDraw.show();
 	
 	

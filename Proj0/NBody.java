@@ -90,7 +90,7 @@ public class NBody{
 		
 		
 		for(Body b: Bodies){
-			b.draw();								//Draw every planet
+			b.draw(Radius);								//Draw every planet
 		}
 		
 		for(t = 0; t<=T; t= t + dt){
@@ -115,7 +115,7 @@ public class NBody{
 			
 			StdDraw.picture(0, 0, imageToDraw, 2*Radius, 2*Radius);		//Set image to fill the whole screen!
 			for(Body b: Bodies){
-				b.draw();								//Draw every planet
+				b.draw(Radius);								//Draw every planet
 			}
 			
 			StdDraw.show();
