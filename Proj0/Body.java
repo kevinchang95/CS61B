@@ -155,7 +155,7 @@
 		String imageToDraw = "images/"+imgFileName;
 		
 		StdDraw.picture(xxPos,yyPos, imageToDraw);		//Set image to fill the whole screen!
-		StdDraw.show();
+		// StdDraw.show();
 	
 	
 	

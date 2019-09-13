@@ -63,16 +63,16 @@ public class NBody{
 
 	public static void main(String[] args){
 		
-		double  T = Double.parseDouble(args[0]);
-		double dt = Double.parseDouble(args[1]);
+		double  T = Double.parseDouble(args[0]);		//Simulation time
+		double dt = Double.parseDouble(args[1]);		//Time increment
 		String fileName = args[2];
 		double Radius;
 		Body[] Bodies;
-		
+		double t = 0;									//Simulation ongoing time
 		
 		Radius = NBody.readRadius(fileName);
 		Bodies = NBody.readBodies(fileName);
-		
+		int numofBody = Bodies.length;
 		
 		// System.out.println("T is "+ T);						//Test passed for fetching data!
 		// System.out.println("dt is "+ dt);
@@ -88,9 +88,44 @@ public class NBody{
 		StdDraw.picture(0, 0, imageToDraw, 2*Radius, 2*Radius);		//Set image to fill the whole screen!
 		StdDraw.show();
 		
+		
 		for(Body b: Bodies){
-			b.draw();
+			b.draw();								//Draw every planet
 		}
+		
+		for(t = 0; t<=T; t= t + dt){
+			
+			double[] XForces = new double[numofBody];
+			double[] YForces = new double[numofBody];
+			double NetForceX = 0;
+			double NetForceY = 0;
+			
+			for(int i = 0; i < Bodies.length; i++){
+				Body b = Bodies[i];
+				NetForceX  = b.calcNetForceExertedByX(Bodies);
+				NetForceY  = b.calcNetForceExertedByY(Bodies);
+				XForces[i] = NetForceX;
+				YForces[i] = NetForceY;
+				
+				b.update(dt,NetForceX,NetForceY);
+								
+			}
+			
+			StdDraw.clear();
+			
+			StdDraw.picture(0, 0, imageToDraw, 2*Radius, 2*Radius);		//Set image to fill the whole screen!
+			for(Body b: Bodies){
+				b.draw();								//Draw every planet
+			}
+			
+			StdDraw.show();
+			StdDraw.pause(10);
+			
+			
+		}
+		
+		
+		
 		
 	}
 	
