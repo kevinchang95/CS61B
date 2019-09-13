@@ -79,8 +79,7 @@ public class NBody{
 		// System.out.println("Radius is " + Radius);
 		// System.out.println("First body's image name is "+ Bodies[0].imgFileName);
 		
-		
-		
+			
 		
 		StdDraw.enableDoubleBuffering();			//Set scale as (-Radius,Radius)!!
 		StdDraw.setScale(-1*Radius, Radius);
