@@ -87,6 +87,11 @@ public class NBody{
 		// StdDraw.picture(0, 0, imageToDraw, 1, 1);
 		StdDraw.picture(0, 0, imageToDraw, 2*Radius, 2*Radius);		//Set image to fill the whole screen!
 		StdDraw.show();
+		
+		for(Body b: Bodies){
+			b.draw();
+		}
+		
 	}
 	
 	
