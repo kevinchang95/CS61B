@@ -42,7 +42,7 @@ public class IntList{
 	}
 	
 	
-	public int iterativeSize(){				//Hug's recursion for List!!
+	public int iterativeSize(){				//Hug's recursion for ListLength!!
 		IntList p = this;
 		int i = 0;
 		while(p!=null){
@@ -53,8 +53,28 @@ public class IntList{
 		return i;
 	}
 	
+	public int get(int q){						//Hug's recursion for GetList!!
+		if(q == 0){
+		
+		return first;
+	
+		}
+		return rest.get(q - 1);
+	}
 	
 	
+	public int iterativeGet(int q){				//Chang's iterative method for GetList!!
+		IntList l = this;
+		while(q != 0){
+		
+		l = l.rest;
+		
+		q = q - 1;
+		
+		}
+		
+		return l.first;
+	}
 	
 	
 	public static void main(String[] args){
@@ -66,6 +86,8 @@ public class IntList{
 		
 		System.out.println("The length of the List is: "+L.size());
 		System.out.println("The length of the List is(Iteratively): "+L.iterativeSize());
+		System.out.println(L.get(2));
+		System.out.println(L.iterativeGet(2));
 	}
 
 

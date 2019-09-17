@@ -1,0 +1,6 @@
+[submodule "lec"]
+	path = lec
+	url = https://github.com/Berkeley-CS61B/lectureCode-sp19
+[submodule "lectureCode2019"]
+	path = lectureCode2019
+	url = https://github.com/Berkeley-CS61B/lectureCode-sp19
