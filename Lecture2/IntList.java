@@ -9,19 +9,28 @@ public class IntList{
 		
 	}
 	
-	public static int size(IntList l){
-		int i = 0;					//List Length
+	// public static int size(IntList l){
+		// int i = 0;					//List Length
 		
-		if(l!=null){
-			l = l.rest;
-			i = i + IntList.size(l);
+		// if(l!=null){
+			// l = l.rest;
+			// i = i + IntList.size(l);
 			
 		
+		// }
+		// else{
+			// i = 1;
+		// }
+		// return i;
+	// }
+	
+	
+	public static int size(IntList l){			//Hug's recursion for List!!
+		if(l.rest == null){
+			return 1;
 		}
-		else{
-			i = 1;
-		}
-		return i;
+		return 1+IntList.size(l.rest);
+		
 	}
 	
 	
