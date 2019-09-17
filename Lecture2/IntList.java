@@ -25,13 +25,36 @@ public class IntList{
 	// }
 	
 	
-	public static int size(IntList l){			//Hug's recursion for List!!
-		if(l.rest == null){
-			return 1;
-		}
-		return 1+IntList.size(l.rest);
+	// public static int size(IntList l){			//Hug's strategy, Chang modified	
+		// if(l.rest == null){
+			// return 1;
+		// }
+		// return 1+IntList.size(l.rest);
 		
+	// }
+	
+	
+	public int size(){				//Hug's recursion for List!!
+		if (this.rest == null){
+			return 1;				//Base case, the last node will return 1
+		}
+		return 1 + this.rest.size();
 	}
+	
+	
+	public int iterativeSize(){				//Hug's recursion for List!!
+		IntList p = this;
+		int i = 0;
+		while(p!=null){
+			p = p.rest;
+			i = i + 1;
+			
+		}
+		return i;
+	}
+	
+	
+	
 	
 	
 	public static void main(String[] args){
@@ -41,7 +64,8 @@ public class IntList{
 		L = new IntList(5,L);
 		
 		
-		System.out.println("The length of the List is: "+IntList.size(L));
+		System.out.println("The length of the List is: "+L.size());
+		System.out.println("The length of the List is(Iteratively): "+L.iterativeSize());
 	}
 
 
