@@ -1,4 +1,4 @@
-public class IntList(){
+public class IntList{
 	public int first;
 	public IntList rest;
 	
@@ -9,11 +9,19 @@ public class IntList(){
 		
 	}
 	
-	public int size(IntList l){
+	public static int size(IntList l){
+		int i = 0;					//List Length
 		
+		if(l!=null){
+			l = l.rest;
+			i = i + IntList.size(l);
+			
 		
-		
-		
+		}
+		else{
+			i = 1;
+		}
+		return i;
 	}
 	
 	
@@ -23,6 +31,8 @@ public class IntList(){
 		L = new IntList(10,L);
 		L = new IntList(5,L);
 		
+		
+		System.out.println("The length of the List is: "+IntList.size(L));
 	}
 
 
