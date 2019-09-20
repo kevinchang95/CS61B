@@ -107,7 +107,23 @@ public class IntList {
         
 
 
-        return null;
+
+
+
+
+        /**This is the Iteration method, it works ok.*/
+        IntList l = new IntList();
+        IntList ptr = l;
+        l.first = A.first;
+        while( A.rest != null){
+            A = A.rest;
+            ptr.rest = new IntList(A.first, null);
+            ptr = ptr.rest;
+        }
+
+        ptr.rest = B;
+
+        return l;
     }
 
 
