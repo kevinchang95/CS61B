@@ -82,6 +82,20 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
+        /** Not sure whether recursive is possible for dcatenate */
+
+        /*if(A== null){
+//            A.rest = B;
+            return(B);
+        }
+        A = A.rest;
+        return(dcatenate(A,B));*/
+
+
+        /**  This is iteration method, it works good*/
+        while(A == null){
+            return(B);              //Caution: MUST consider the special cases!
+        }
 
         IntList ptr = A;
 

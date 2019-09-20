@@ -4,7 +4,7 @@
     <list default="true" id="43128d61-8538-4af5-a9b7-8abde069ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intlist/IntList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Intlist/IntList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2/IntList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab2/IntList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2/IntList.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lectureCode2019" beforeDir="false" afterPath="$PROJECT_DIR$/../lectureCode2019" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntListTest.java" afterDir="false" />
@@ -77,8 +77,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Intlist/IntList.java</url>
-          <line>117</line>
+          <line>131</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Intlist/IntList.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
