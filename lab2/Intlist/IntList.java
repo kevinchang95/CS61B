@@ -103,16 +103,19 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
+        /**This is the Recursive method, it works ok.*/
+        if (A == null){
+            return(B);
+        }
 
-        
-
+        return(new IntList(A.first , catenate(A.rest,B)));
 
 
 
 
 
         /**This is the Iteration method, it works ok.*/
-        IntList l = new IntList();
+       /* IntList l = new IntList();
         IntList ptr = l;
         l.first = A.first;
         while( A.rest != null){
@@ -123,7 +126,7 @@ public class IntList {
 
         ptr.rest = B;
 
-        return l;
+        return l;*/
     }
 
 
