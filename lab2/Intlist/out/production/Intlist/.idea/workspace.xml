@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/../DebugPractice/DebugExercise3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DebugPractice/DebugExercise3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DebugPractice/foods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../DebugPractice/foods.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IntList.java" beforeDir="false" afterPath="$PROJECT_DIR$/IntList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IntListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/IntListTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -79,8 +82,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/IntList.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="3" />
+          <line>85</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
