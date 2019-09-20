@@ -103,6 +103,10 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
+
+        
+
+
         return null;
     }
 

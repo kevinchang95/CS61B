@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ddb165b-53e1-4f86-aa6a-bf6ad1bfb92f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DebugPractice/DebugExercise1.java" beforeDir="false" afterPath="$PROJECT_DIR$/DebugPractice/DebugExercise1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DebugPractice/DebugExercise2.java" beforeDir="false" afterPath="$PROJECT_DIR$/DebugPractice/DebugExercise2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DebugPractice/DebugExercise3.java" beforeDir="false" afterPath="$PROJECT_DIR$/DebugPractice/DebugExercise3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DebugPractice/foods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DebugPractice/foods.csv" afterDir="false" />
+    <list default="true" id="43128d61-8538-4af5-a9b7-8abde069ee52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intlist/IntList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Intlist/IntList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lectureCode2019" beforeDir="false" afterPath="$PROJECT_DIR$/../lectureCode2019" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skeleton-sp19/lab2/Intlist/IntListTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +17,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1R4R7DnptxFgk81IsSkLl7KxzcC" />
+  <component name="ProjectId" id="1R6kbaQxqFkjb5wRWDuQIfJKvwz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -33,46 +31,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DebugExercise3">
-    <configuration name="DebugExercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DebugExercise1" />
-      <module name="lab2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DebugExercise2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DebugExercise2" />
-      <module name="lab2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DebugExercise3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DebugExercise3" />
-      <module name="lab2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.DebugExercise3" />
-        <item itemvalue="Application.DebugExercise2" />
-        <item itemvalue="Application.DebugExercise1" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2ddb165b-53e1-4f86-aa6a-bf6ad1bfb92f" name="Default Changelist" comment="" />
-      <created>1568924211324</created>
+      <changelist id="43128d61-8538-4af5-a9b7-8abde069ee52" name="Default Changelist" comment="" />
+      <created>1568995004073</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1568924211324</updated>
+      <updated>1568995004073</updated>
     </task>
     <servers />
   </component>
@@ -86,21 +54,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/DebugPractice/DebugExercise1.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/DebugPractice/DebugExercise2.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
