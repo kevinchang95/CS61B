@@ -83,14 +83,14 @@ public class IntList{
 		L = new IntList(10,L);
 		L = new IntList(5,L);
 		
-		IntList p = L;
-		System.out.println("The length of the List is: "+L.size());
-		System.out.println("The length of the List is(Iteratively): "+p.iterativeSize());
+		// IntList p = L;
+		// System.out.println("The length of the List is: "+L.size());
+		// System.out.println("The length of the List is(Iteratively): "+p.iterativeSize());
 		
-		p = p.rest;
+		// p = p.rest;
 		
 		System.out.println("The length of the List is: "+L.size());
-		System.out.println("The length of the List is(Iteratively): "+p.iterativeSize());
+		// System.out.println("The length of the List is(Iteratively): "+ p.iterativeSize());
 		
 		System.out.println(L.get(2));
 		System.out.println(L.iterativeGet(2));
