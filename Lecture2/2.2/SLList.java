@@ -25,14 +25,42 @@ public class SLList {
     }
 
     /** Adds an item to the end of the list. */
-    public void addLast(int x) {
+    
+	private IntNode addLast(IntNode p, int x){
+		if(p.next == null){
+			p.next = new IntNode(x,null);
+			return p;
+		}			
+		
+		return addLast(p.next,x);
+	}
+	
+	public void addLast(int x) {
         /* Your Code Here! */
+	
+		IntNode p = first;
+		p = addLast(p, x);
+		
     }
 
     /** Returns the number of items in the list using recursion. */
     public int size() {
         /* Your Code Here! */
-    }
+		if(first.next == null){
+			return 1;
+		}
+		return 1;
+	}
+	
+	public static void main(String[] args){
+		SLList p = new SLList(10);
+		p.addFirst(5);
+		p.addLast(15);
+		p.addLast(20);
+		System.out.println(p.first.next.next.item);
+	
+	}
+	
+	
 
-}
 }
