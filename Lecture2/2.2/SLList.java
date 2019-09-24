@@ -1,72 +1,38 @@
- /** An SLList is a list of integers, which hides the terrible truth
-   * of the nakedness within. */
-public class SLList {	
-	private static class IntNode {
-		public int item;
-		public IntNode next;
+public class SLList {
+    public class IntNode {
+        public int item;
+        public IntNode next;
+        public IntNode(int i, IntNode n) {
+            item = i;
+            next = n;
+        }
+    }
 
-		public IntNode(int i, IntNode n) {
-			item = i;
-			next = n;
-			System.out.println(this.size);
-		}
-	} 
+    private IntNode first; 
 
-	/* The first item (if it exists) is at sentinel.next. */
-	private IntNode sentinel;
-	private int size;
+    public SLList(int x) {
+        first = new IntNode(x, null);
+    }
 
-	private static void lectureQuestion() {
-		SLList L = new SLList();
-		IntNode n = IntNode(5, null);
-	}
+    /** Adds an item to the front of the list. */
+    public void addFirst(int x) {
+        first = new IntNode(x, first);
+    }    
 
-	/** Creates an empty SLList. */
-	public SLList() {
-		sentinel = new IntNode(63, null);
-		size = 0;
-	}
+    /** Retrieves the front item from the list. */
+    public int getFirst() {
+        return first.item;
+    }
 
-	public SLList(int x) {
-		sentinel = new IntNode(63, null);
-		sentinel.next = new IntNode(x, null);
-		size = 1;
-	}
+    /** Adds an item to the end of the list. */
+    public void addLast(int x) {
+        /* Your Code Here! */
+    }
 
- 	/** Adds x to the front of the list. */
- 	public void addFirst(int x) {
- 		sentinel.next = new IntNode(x, sentinel.next);
- 		size = size + 1;
- 	}
+    /** Returns the number of items in the list using recursion. */
+    public int size() {
+        /* Your Code Here! */
+    }
 
- 	/** Returns the first item in the list. */
- 	public int getFirst() {
- 		return sentinel.next.item;
- 	}
-
- 	/** Adds x to the end of the list. */
- 	public void addLast(int x) {
- 		size = size + 1; 		
-
- 		IntNode p = sentinel;
-
- 		/* Advance p to the end of the list. */
- 		while (p.next != null) {
- 			p = p.next;
- 		}
-
- 		p.next = new IntNode(x, null);
- 	}
- 	
- 	/** Returns the size of the list. */
- 	public int size() {
- 		return size;
- 	}
-
-	public static void main(String[] args) {
- 		/* Creates a list of one integer, namely 10 */
- 		SLList L = new SLList();
- 		L.addLast(20);
- 		System.out.println(L.size());
- 	}
+}
 }
