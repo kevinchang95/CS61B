@@ -10,6 +10,12 @@ public class LinkedListDeque<dataType> {
         public dataType item;
         public Node next;
 
+        public Node(){
+            prev = null;
+            item = null;
+            next = null;
+        }
+
         public Node(Node p, dataType i, Node n){
 
             prev = p;
@@ -30,8 +36,14 @@ public class LinkedListDeque<dataType> {
 
     }
 
-    public LinkedListDeque(LinkedListDeque m){
+    public LinkedListDeque(LinkedListDeque other){
+        sentinel = new Node();
+        sentinel.prev = sentinel;
+        sentinel.next = sentinel;
 
+        for(int i = 0; i < other.size(); i += 1){
+            addLast((dataType) other.get(i));
+        }
 
     }
 
@@ -113,11 +125,11 @@ public class LinkedListDeque<dataType> {
         System.out.println();
     }
 
-    public Node get(int i){
+    public dataType get(int i){
         Node p = sentinel;
         while(p.next !=sentinel){
             if(i == 0){
-                return p;
+                return p.item;
             }
             p = p.next;
             i--;
