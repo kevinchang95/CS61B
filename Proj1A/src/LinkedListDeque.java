@@ -123,15 +123,20 @@ public class LinkedListDeque<dataType> {
             p = p.next;
         }
         System.out.println();
-    }
+     }
 
     public dataType get(int i){
         Node p = sentinel;
-        while(p.next !=sentinel){
+        p.next = sentinel.next;
+        p.prev = sentinel.prev;
+
+        while(p.next != sentinel){
+            p = p.next;
             if(i == 0){
+
                 return p.item;
             }
-            p = p.next;
+
             i--;
         }
 
