@@ -10,7 +10,7 @@ public class NaiveAList {
     }
 
     private void resize(int capacity){
-        int[]  q = new int[capacity];
+        int[]  q = new int[capacity * 2];
         System.arraycopy(item,0,q,0,size);
         item = q;
     }
