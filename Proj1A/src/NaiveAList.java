@@ -11,8 +11,17 @@ public class NaiveAList {
 
     /** Inserts X into the back of the list. */
     public void addLast(int x) {
-        item[size] = x;
-        size += 1;
+        if(size == item.length){
+            int[]  q = new int[size + 1];
+            System.arraycopy(item,0,q,0,size);
+
+            item = q;
+
+
+        }
+            item[size] = x;
+            size += 1;
+
     }
 
     /** Returns the item from the back of the list. */
