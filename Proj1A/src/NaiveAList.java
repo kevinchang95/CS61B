@@ -9,15 +9,16 @@ public class NaiveAList {
         item = new int[100];
     }
 
+    private void resize(int capacity){
+        int[]  q = new int[capacity];
+        System.arraycopy(item,0,q,0,size);
+        item = q;
+    }
+
     /** Inserts X into the back of the list. */
     public void addLast(int x) {
         if(size == item.length){
-            int[]  q = new int[size + 1];
-            System.arraycopy(item,0,q,0,size);
-
-            item = q;
-
-
+            resize(size + 1);
         }
             item[size] = x;
             size += 1;
