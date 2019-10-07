@@ -1,6 +1,6 @@
 public class ArrayDeque<datatype> {
-    private int size;
-    private datatype[] items;
+    public int size;
+    public datatype[] items;
     private int nextFirst;
     private int nextLast;
 
@@ -11,25 +11,38 @@ public class ArrayDeque<datatype> {
         nextLast = 1;                       //In order to make two nodes not conflict, set starting position different
     }
 
+    /**function plusOne and minusOne are important helper
+     * functions to implement the circular array list.
+     *
+     * plusOne is for pushing the pointer index forward and
+     * circulate to the front if reach the end.
+     *
+     * minusOne is for pulling the pointer backwards and circulate
+     * to the end if reach the front.
+     * @param index
+     * @return
+     */
 
 
-    public void resize(int capacity){
-        datatype[] p = (datatype[]) new Object[capacity];
-        System.arraycopy(items,0,p,0,size);
-        items = p;
+    public int plusOne(int index){
+
+        index = (index + 1) % items.length;
+        return  index;
     }
 
+    public int minusOne(int index){
 
+        index = (index -1 + items.length) % items.length;
+        return index;
+    }
 
     public void addFirst(datatype q ){
         if(size == items.length) {
             resize(size * 2);
         }
+
         items[nextFirst] = q;
-        nextFirst = nextFirst - 1;
-        if(nextFirst < 0){
-            nextFirst = nextFirst + items.length;
-        }
+        nextFirst = minusOne(nextFirst);
 
         size = size + 1;
 
@@ -40,40 +53,65 @@ public class ArrayDeque<datatype> {
             resize(size * 2);
         }
         items[nextLast] = q;
-        nextLast = nextLast + 1;
-        if(nextLast > items.length - 1){
-            nextLast = 0;
-        }
+        nextLast = plusOne(nextLast);
 
         size = size + 1;
 
 
-        size +=1;
     }
 
-    public LinkedListDeque.Node removeFirst(){
-        LinkedListDeque.Node p = sentinel.next;
-        if(p == sentinel){
-            return null;
+    public datatype removeFirst(){
+        if(isLowUsage()){
+            resize(items.length / 2);
         }
+        nextFirst = plusOne(nextFirst);
+        datatype p = items[nextFirst];
+        items[nextFirst] = null;
 
-        sentinel.next = sentinel.next.next;
-        sentinel.next.prev = sentinel;
+        size = size - 1;
 
-        size -=1;
         return p;
     }
 
-    public LinkedListDeque.Node removeLast(){
-
-        LinkedListDeque.Node p = sentinel.prev;
-        if(p == sentinel){
-            return null;
+    public datatype removeLast(){
+        if(isLowUsage()){
+            resize(items.length / 2);
         }
-        sentinel.prev = sentinel.prev.prev;
-        sentinel.prev.next = sentinel;
-        size -=1;
+
+        nextLast = minusOne(nextLast);
+
+        datatype p =items[nextLast];
+        items[nextLast] = null;
+        size = size - 1;
+
         return p;
+    }
+
+    public boolean isLowUsage(){
+        double usageRatio = size / items.length;
+        return(items.length >= 16 && usageRatio < 0.25);
+    }
+
+    public void resize(int capacity){
+        datatype[] p = (datatype[]) new Object[capacity];
+        int oldIndex = plusOne(nextFirst);
+        int newIndex = 0;
+        do{
+            p[newIndex] = items[oldIndex];
+            newIndex ++;
+            oldIndex = plusOne(oldIndex);
+        }while(oldIndex != nextLast);
+
+        items = p;
+        nextFirst = minusOne(0);
+        nextLast = newIndex;
+    }
+
+
+    public boolean isEmpty(){
+
+        return size == 0;
+
     }
 
     public int size(){
@@ -81,40 +119,36 @@ public class ArrayDeque<datatype> {
         return size;
     }
 
-    public boolean isEmpty(){
 
-        if(size == 0){
-            return true;
-        }
-        return false;
-    }
 
     public void printDeque(){
-        LinkedListDeque.Node p = sentinel.next;
-        while(p != sentinel) {
-            System.out.print(p.item+" ");
-            p = p.next;
+        int i = plusOne(nextFirst);
+        while(i != nextLast){
+            System.out.print(items[i] + " ");
+            i = plusOne(i);
         }
         System.out.println();
     }
 
-    public dataType get(int i){
-        LinkedListDeque.Node p = sentinel;
-        p.next = sentinel.next;
-        p.prev = sentinel.prev;
+    public datatype get(int q){
+        if(q >= size){
+            System.out.println("Index exceeds array size!!!");
+            return null;
 
-        while(p.next != sentinel){
-            p = p.next;
-            if(i == 0){
-
-                return p.item;
-            }
-
-            i--;
         }
 
-        return null;
+        int x = plusOne(nextFirst);
+        datatype m = items[x];
+        for (int i = 0; i < q; i++){
+            x = plusOne(x);
+        }
+
+        return items[x];
+
+
     }
+
+
 
     public static void main(String[] args) {
 
