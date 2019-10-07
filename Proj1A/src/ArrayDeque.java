@@ -88,7 +88,7 @@ public class ArrayDeque<datatype> {
     }
 
     public boolean isLowUsage(){
-        double usageRatio = size / items.length;
+        double usageRatio = (double)size / (double)items.length;
         return(items.length >= 16 && usageRatio < 0.25);
     }
 

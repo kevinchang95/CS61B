@@ -33,6 +33,14 @@ public class ArrayDequeTest {
         System.out.println("Print the 6th element:");
         System.out.println(a.get(6));
 
+        System.out.println("Testing remove function");
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeFirst();
+        a.removeLast();
+        a.removeLast();
+        a.printDeque();
 
 
     }
