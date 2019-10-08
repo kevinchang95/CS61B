@@ -40,6 +40,8 @@ public class ArrayDequeTest {
         a.removeFirst();
         a.removeLast();
         a.removeLast();
+        /**Test the downsize of the list*/
+        a.removeLast();
         a.printDeque();
 
 
