@@ -26,7 +26,13 @@ public class ArrayDequeTest {
 
         }*/
 
-        a.addLast("Seven");
+       /**Test the copy of the list using construtor*/
+
+        System.out.println("Copy list a: ");
+        ArrayDeque<String> b = new ArrayDeque<>(a) ;
+        b.printDeque();
+
+       /* a.addLast("Seven");
         a.addFirst("Eight");
         System.out.println("testing the upsize of the list");
         a.printDeque();
@@ -40,9 +46,9 @@ public class ArrayDequeTest {
         a.removeFirst();
         a.removeLast();
         a.removeLast();
-        /**Test the downsize of the list*/
+        *//**Test the downsize of the list*//*
         a.removeLast();
-        a.printDeque();
+        a.printDeque();*/
 
 
     }

@@ -11,6 +11,21 @@ public class ArrayDeque<datatype> {
         nextLast = 1;                       //In order to make two nodes not conflict, set starting position different
     }
 
+
+    public ArrayDeque(ArrayDeque other){
+        size = 0;
+        items = (datatype[])new Object[8];
+        nextFirst = 0;                      //Set first Node at position 4
+        nextLast = 1;                       //In order to make two nodes not conflict, set starting position different
+
+        addFirst((datatype) other.get(0));
+        for(int i = 1; i < other.size(); i += 1){
+            addLast((datatype) other.get(i));
+        }
+
+    }
+
+
     /**function plusOne and minusOne are important helper
      * functions to implement the circular array list.
      *
