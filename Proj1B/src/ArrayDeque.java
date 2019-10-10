@@ -50,7 +50,7 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
         index = (index -1 + items.length) % items.length;
         return index;
     }
-
+    @Override
     public void addFirst(datatype q ){
         if(size == items.length) {
             resize(size * 2);
@@ -62,7 +62,7 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
         size = size + 1;
 
     }
-
+    @Override
     public void addLast(datatype q){
         if(size == items.length) {
             resize(size * 2);
@@ -74,7 +74,7 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
 
 
     }
-
+    @Override
     public datatype removeFirst(){
         if(isLowUsage()){
             resize(items.length / 2);
@@ -87,7 +87,7 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
 
         return p;
     }
-
+    @Override
     public datatype removeLast(){
         if(isLowUsage()){
             resize(items.length / 2);
@@ -107,6 +107,7 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
         return(items.length >= 16 && usageRatio < 0.25);
     }
 
+
     public void resize(int capacity){
         datatype[] p = (datatype[]) new Object[capacity];
         int oldIndex = plusOne(nextFirst);
@@ -122,20 +123,20 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
         nextLast = newIndex;
     }
 
-
+    @Override
     public boolean isEmpty(){
 
         return size == 0;
 
     }
-
+    @Override
     public int size(){
 
         return size;
     }
 
 
-
+    @Override
     public void printDeque(){
         int i = plusOne(nextFirst);
         while(i != nextLast){
@@ -144,7 +145,7 @@ public class ArrayDeque<datatype> implements Deque<datatype>{
         }
         System.out.println();
     }
-
+    @Override
     public datatype get(int q){
         if(q >= size){
             System.out.println("Index exceeds array size!!!");

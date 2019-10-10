@@ -54,7 +54,7 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
      * "last".next = sentinel
      * @param q
      */
-
+    @Override
     public void addFirst(dataType q ){
         Node p = new Node(null,q,null);
         p.next = sentinel.next;
@@ -63,7 +63,7 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
         p.prev = sentinel;
         size +=1;
     }
-
+    @Override
     public void addLast(dataType q){
         Node p = new Node(null,q,null);
         //Link last Node with List
@@ -77,9 +77,9 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
 
         size +=1;
     }
-
-    public Node removeFirst(){
-        Node p = sentinel.next;
+    @Override
+    public dataType removeFirst(){
+        dataType p = sentinel.next.item;
         if(p == sentinel){
             return null;
         }
@@ -90,10 +90,10 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
         size -=1;
         return p;
     }
+    @Override
+    public dataType removeLast(){
 
-    public Node removeLast(){
-
-        Node p = sentinel.prev;
+        dataType p = sentinel.prev.item;
         if(p == sentinel){
             return null;
         }
@@ -102,12 +102,12 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
         size -=1;
         return p;
     }
-
+    @Override
     public int size(){
 
         return size;
     }
-
+    @Override
     public boolean isEmpty(){
 
         if(size == 0){
@@ -115,7 +115,7 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
         }
         return false;
     }
-
+    @Override
     public void printDeque(){
         Node p = sentinel.next;
         while(p != sentinel) {
@@ -124,7 +124,8 @@ public class LinkedListDeque<dataType> implements Deque<dataType> {
         }
         System.out.println();
      }
-@Override
+
+    @Override
     public dataType get(int i){
         Node p = sentinel;
         p.next = sentinel.next;
