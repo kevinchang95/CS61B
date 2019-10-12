@@ -5,9 +5,16 @@ public class PalindromeFinder {
         In in = new In("words.txt");
         Palindrome palindrome = new Palindrome();
 
-        while (!in.isEmpty()) {
+       /* while (!in.isEmpty()) {
             String word = in.readString();
             if (word.length() >= minLength && palindrome.isPalindrome(word)) {
+                System.out.println(word);
+            }
+        }*/
+       CharacterComparator cc = new OffByN(5);
+        while (!in.isEmpty()) {
+            String word = in.readString();
+            if (word.length() >= minLength && palindrome.isPalindrome(word,cc)) {
                 System.out.println(word);
             }
         }
