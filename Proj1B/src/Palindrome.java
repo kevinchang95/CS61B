@@ -40,5 +40,25 @@ public class Palindrome {
     }
 
 
+    private boolean isPalindrome(Deque q, CharacterComparator cc){
+
+
+        if(q.size() == 1 || q.size() == 0){
+            return true;
+        }
+
+        if(cc.equalChars((char)q.removeFirst(), (char)q.removeLast())){
+
+                return isPalindrome(q,cc);
+
+        }
+
+        return false;
+    }
+
+    public boolean isPalindrome(String word, CharacterComparator cc){
+        Deque<Character> q = wordToDeque(word);
+        return isPalindrome(q,cc);
+    }
 
 }

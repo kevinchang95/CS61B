@@ -31,4 +31,22 @@ public class TestPalindrome {
 
     }
 
+    @Test
+    public void testisParlindrome_offByOne(){
+        String test1 = "racecar";
+        String test2 = "flake";
+        String test3 = "q";
+        String test4 = "";
+        CharacterComparator q = new OffByOne();
+
+        assertFalse(palindrome.isPalindrome(test1,q));
+        assertTrue(palindrome.isPalindrome(test2,q));
+        assertTrue(palindrome.isPalindrome(test3,q));
+        assertTrue(palindrome.isPalindrome(test4,q));
+
+
+    }
+
+
+
 }     //Uncomment this class once you've created your Palindrome class.
