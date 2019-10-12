@@ -22,15 +22,11 @@ public class Palindrome {
 
     private boolean isPalindrome(Deque q){
 
-        if(q.size() == 1 || q.size() == 0){
+        if(q.size() <= 1){
             return true;
         }
-        if(q.removeFirst().equals(q.removeLast())){
-            return isPalindrome(q);
+            return ((q.removeFirst().equals(q.removeLast())) && isPalindrome(q));
 
-        }
-
-        return false;
 
     }
 
@@ -43,17 +39,12 @@ public class Palindrome {
     private boolean isPalindrome(Deque q, CharacterComparator cc){
 
 
-        if(q.size() == 1 || q.size() == 0){
+        if(q.size() <= 1){
             return true;
         }
 
-        if(cc.equalChars((char)q.removeFirst(), (char)q.removeLast())){
+        return ((cc.equalChars((char)q.removeFirst(), (char)q.removeLast() )) && isPalindrome(q,cc));
 
-                return isPalindrome(q,cc);
-
-        }
-
-        return false;
     }
 
     public boolean isPalindrome(String word, CharacterComparator cc){

@@ -11,7 +11,7 @@ public class PalindromeFinder {
                 System.out.println(word);
             }
         }*/
-       CharacterComparator cc = new OffByN(5);
+       CharacterComparator cc = new OffByN(10);
         while (!in.isEmpty()) {
             String word = in.readString();
             if (word.length() >= minLength && palindrome.isPalindrome(word,cc)) {
