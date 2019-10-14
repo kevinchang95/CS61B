@@ -1,11 +1,11 @@
  /** An SLList is a list of integers, which hides the terrible truth
    * of the nakedness within. */
-public class SLList {	
-	private static class IntNode {
-		public int item;
-		public IntNode next;
+public class SLList<datatype> {
+	private class Node {
+		public datatype item;
+		public Node next;
 
-		public IntNode(int i, IntNode n) {
+		public Node(datatype i, Node n) {
 			item = i;
 			next = n;
 
@@ -13,7 +13,7 @@ public class SLList {
 	} 
 
 	/* The first item (if it exists) is at sentinel.next. */
-	private IntNode sentinel;
+	private Node sentinel;
 	private int size;
 
 	private static void lectureQuestion() {
