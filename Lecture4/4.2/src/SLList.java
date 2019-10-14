@@ -54,6 +54,16 @@ public class SLList<datatype> implements CS61Blist<datatype> {
  		return p.item;
 	}
 
+	 public Node getLastNode(){
+		 Node p = sentinel;
+
+		 while(p.next!= null){
+			 p = p.next;
+
+		 }
+
+		 return p;
+	 }
 
 	 @Override
  	/** Adds x to the end of the list. */
@@ -80,14 +90,14 @@ public class SLList<datatype> implements CS61Blist<datatype> {
 
 		}
  		Node p = sentinel;
-
- 		while(p.next != null){
+		Node q = getLastNode();
+ 		while(p.next != q){
  			p = p.next;
 		}
 
-		Node m = new Node(p.item,null);
+		Node m = new Node(q.item,null);
 
- 		p = null;
+ 		p.next = null;
 
  		return m.item;
 
