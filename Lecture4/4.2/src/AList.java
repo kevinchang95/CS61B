@@ -1,4 +1,4 @@
-public class AList <datatype>  {
+public class AList<datatype> implements CS61Blist<datatype>  {
     public int size;
     public datatype[] items;
 
@@ -20,7 +20,7 @@ public class AList <datatype>  {
         items = a;
 
     }
-
+    @Override
     public void insert(datatype m, int pos){
         datatype[] q = (datatype[])new Object[items.length + 1];
         System.arraycopy(items,0,q,0,pos);
@@ -31,6 +31,7 @@ public class AList <datatype>  {
         items = q;
 
     }
+    @Override
     public void AddFirst(datatype m){
         if(size == items.length){
             resize(2 * size);
@@ -39,7 +40,7 @@ public class AList <datatype>  {
         insert(m,0);
 
     }
-
+    @Override
     public void AddLast(datatype m){
         if(size == items.length){
             resize(2 * size);
@@ -60,7 +61,7 @@ public class AList <datatype>  {
         size -= 1;
         return m;
     }
-
+    @Override
     public datatype RemoveLast(){
         datatype m = items[size-1];
 
@@ -75,12 +76,12 @@ public class AList <datatype>  {
         return items[0];
 
     }
-
+    @Override
     public datatype getLast(){
 
         return items[size-1];
     }
-
+    @Override
     public datatype get(int i){
         if(i >= size){
             System.out.println("Element doesn't exist!!");
@@ -91,7 +92,7 @@ public class AList <datatype>  {
 
     }
 
-
+    @Override
     public int size(){
         return size;
 
