@@ -14,7 +14,7 @@ public class Dog implements OurComparable{
     @Override
     public int compareTo(Object d){
         Dog dd = (Dog) d;
-        if(size > dd.size){
+       /* if(size > dd.size){
             return 1;
 
         }else if(size == dd.size){
@@ -22,9 +22,9 @@ public class Dog implements OurComparable{
 
         }else{
             return -1;
-        }
+        }*/
 
-
+        return this.size - dd.size;
     }
 
 
