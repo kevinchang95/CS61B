@@ -1,4 +1,4 @@
-public class Dog implements OurComparable{
+public class Dog implements Comparable<Dog>{
 
     String type;
     int size;
@@ -12,8 +12,8 @@ public class Dog implements OurComparable{
 
 
     @Override
-    public int compareTo(Object d){
-        Dog dd = (Dog) d;
+    public int compareTo(Dog d){
+        Dog dd = d;
        /* if(size > dd.size){
             return 1;
 
