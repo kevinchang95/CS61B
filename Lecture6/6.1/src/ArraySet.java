@@ -12,6 +12,8 @@ public class ArraySet<T> {
     /* Returns true if this set contains a specified value.
      */
     public boolean contains(T x) {
+
+
         for(int i = 0; i < size ;i += 1){
             if(items[i].equals(x)){
                 return true;
@@ -23,6 +25,9 @@ public class ArraySet<T> {
     /* Associates the specified value with the specified key in this map. 
        Throws an IllegalArgumentException if the key is null. */
     public void add(T x) {
+        if(x == null){
+            throw new IllegalArgumentException("ArraySet cannot add null!");
+        }
 
         items[size] = x;
         size += 1;
