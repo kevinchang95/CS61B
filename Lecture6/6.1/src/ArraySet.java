@@ -71,6 +71,22 @@ public class ArraySet<T> implements Iterable<T>{
         return size;
     }
 
+    @Override
+    public String toString(){
+        String str;
+        str = "[";
+        for(int i = 0;i < size-1; i+= 1){
+            str = str + (String)items[i] + ",";
+        }
+            str = str + (String)items[size] + "]";
+
+        return str;
+    }
+
+
+
+
+
     public static void main(String[] args) {
         ArraySet<String> s = new ArraySet<>();
 //        s.add(null);
@@ -86,10 +102,12 @@ public class ArraySet<T> implements Iterable<T>{
             System.out.println(seer.next());
         }*/
 
-      for(String ss : s){
+      /*for(String ss : s){
 
         System.out.println(ss);
-      }
+      }*/
+
+      System.out.println(s.toString());
 
     }
 
