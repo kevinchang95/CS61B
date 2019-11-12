@@ -3,6 +3,7 @@ import java.util.Iterator;
 public class ArraySet<T> implements Iterable<T>{
 
     private T[] items;
+
     private int size;
 
 
@@ -12,8 +13,8 @@ public class ArraySet<T> implements Iterable<T>{
     }
 
     public Iterator<T> iterator(){
-        return null;
-//        return new ArraySetIterator();
+//        return null;
+        return new ArraySetIterator();
     }
 
     private class ArraySetIterator implements Iterator<T>{
@@ -71,8 +72,10 @@ public class ArraySet<T> implements Iterable<T>{
         return size;
     }
 
-    @Override
-    public String toString(){
+//    @Override
+
+    /**DIY dummy method of toString()*/
+ /*   public String toString(){
         String str;
         str = "[";
         for(int i = 0;i < size-1; i+= 1){
@@ -81,9 +84,37 @@ public class ArraySet<T> implements Iterable<T>{
             str = str + (String)items[size] + "]";
 
         return str;
+    }*/
+    @Override
+    /**This to String method will be called automatically in the println(Object x) method!*/
+
+    /*public String toString(){
+
+        String str = "{";
+        for(T item : this){         //Caution: Using "this" because for iterable items, there is only one iterable object!
+           str += item.toString();
+           str += ",";
+        }
+        str = str += "}";
+
+        return str;
+    }*/
+
+    /**Use String builder*/
+    public String toString(){
+
+        StringBuilder strSB = new StringBuilder();
+        strSB.append("{");
+        for(int i = 0; i<size -1; i += 1) {
+
+            strSB.append(items[i].toString() + ",");
+
+        }
+        strSB.append(items[size - 1].toString()+"}");
+
+        return strSB.toString();
+
     }
-
-
 
 
 
@@ -93,7 +124,7 @@ public class ArraySet<T> implements Iterable<T>{
         s.add("horse");
         s.add("fish");
         s.add("house");
-        s.add("fish");        
+        s.add("fish2");
         System.out.println(s.contains("horse"));        
         System.out.println(s.size());
 
@@ -102,12 +133,12 @@ public class ArraySet<T> implements Iterable<T>{
             System.out.println(seer.next());
         }*/
 
-      /*for(String ss : s){
+      for(String ss : s){
 
         System.out.println(ss);
-      }*/
+      }
 
-      System.out.println(s.toString());
+      System.out.println(s);
 
     }
 
