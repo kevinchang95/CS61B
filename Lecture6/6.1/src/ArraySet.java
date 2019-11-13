@@ -116,6 +116,31 @@ public class ArraySet<T> implements Iterable<T>{
 
     }
 
+    @Override
+    /** Remember: the signature should be EXACTLY the same to get rid of the override issue!*/
+    public boolean equals(Object other){
+
+        if(other == this){
+            return true;
+        }
+        if(other.getClass()!= this.getClass()){
+            return false;
+        }
+
+        ArraySet<T> q = (ArraySet<T>) other;
+        if(this.size != q.size){
+            return false;
+        }
+
+        for(T item: this){
+
+            if(!q.contains(item)){
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
     public static void main(String[] args) {
@@ -128,6 +153,13 @@ public class ArraySet<T> implements Iterable<T>{
         System.out.println(s.contains("horse"));        
         System.out.println(s.size());
 
+        ArraySet<String> s1 = new ArraySet<>();
+
+        s1.add("fish");
+        s1.add("house");
+        s1.add("fish2");
+        s1.add("horse");
+
       /*  Iterator<String> seer = s.iterator();
         while(seer.hasNext()){
             System.out.println(seer.next());
@@ -139,7 +171,8 @@ public class ArraySet<T> implements Iterable<T>{
       }
 
       System.out.println(s);
-
+      System.out.println(s.equals(s1));
+      System.out.println(s.equals("fish"));
     }
 
     /* Also to do:
