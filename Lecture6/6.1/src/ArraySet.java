@@ -1,4 +1,9 @@
+import com.sun.jdi.ArrayReference;
+
+import java.lang.reflect.Array;
 import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
 
 public class ArraySet<T> implements Iterable<T>{
 
@@ -101,7 +106,7 @@ public class ArraySet<T> implements Iterable<T>{
     }*/
 
     /**Use String builder*/
-    public String toString(){
+ /*   public String toString(){
 
         StringBuilder strSB = new StringBuilder();
         strSB.append("{");
@@ -114,6 +119,29 @@ public class ArraySet<T> implements Iterable<T>{
 
         return strSB.toString();
 
+    }*/
+
+    /**Use method of String: join*/
+    public String toString(){
+
+        List<String> listOfItems = new ArrayList<>();
+        for (T item : this){
+            listOfItems.add(item.toString());
+        }
+
+        return "{" + String.join(",",listOfItems) + "}";
+
+    }
+
+    /**Creating method of using varArg*/
+    public static <Glorp> ArraySet<Glorp> of(Glorp ... items){
+
+        ArraySet<Glorp> returnSet = new ArraySet<>();
+        for (Glorp item : items){
+            returnSet.add(item);
+        }
+
+        return returnSet;
     }
 
     @Override
@@ -173,6 +201,10 @@ public class ArraySet<T> implements Iterable<T>{
       System.out.println(s);
       System.out.println(s.equals(s1));
       System.out.println(s.equals("fish"));
+
+      ArraySet<String> s2 = ArraySet.of("fish","fish2","horse","house");
+
+      System.out.println(s.equals(s2));
     }
 
     /* Also to do:
