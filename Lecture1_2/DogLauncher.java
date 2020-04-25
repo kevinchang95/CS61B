@@ -16,7 +16,7 @@ public class DogLauncher{
 		//d.makeNoise();
 		//Dog.makeNoise();
 		
-		/**Dog[] dogs= new Dog[2];
+		Dog[] dogs= new Dog[2];
 		dogs[0] = new Dog(20);
 		dogs[1] = new Dog(150);
 		dogs[0].makeNoise();
@@ -31,8 +31,8 @@ public class DogLauncher{
 		thatmaxdog.makeNoise();
 		
 		System.out.println(Dog.binomen);
-		*/
 		
+		/**
 		Dog smallDog = new Dog(5);
 		Dog mediumDog = new Dog(25);
 		Dog hugeDog = new Dog(150);
@@ -47,7 +47,7 @@ public class DogLauncher{
 			Dog.maxDog(manyDogs[i],mediumDog).makeNoise();
 			i = i + 1;
 		}
-		
+		*/
 		
 		
 	}
