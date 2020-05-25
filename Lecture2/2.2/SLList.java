@@ -8,7 +8,7 @@ public class SLList {
 		public IntNode(int i, IntNode n) {
 			item = i;
 			next = n;
-			System.out.println(this.size);
+			//System.out.println(this.size);
 		}
 	} 
 
@@ -18,7 +18,7 @@ public class SLList {
 
 	private static void lectureQuestion() {
 		SLList L = new SLList();
-		IntNode n = IntNode(5, null);
+		IntNode n = new IntNode(5, null);
 	}
 
 	/** Creates an empty SLList. */
@@ -50,13 +50,22 @@ public class SLList {
 
  		IntNode p = sentinel;
 
- 		/* Advance p to the end of the list. */
+ 		 /*Advance p to the end of the list.*/
  		while (p.next != null) {
  			p = p.next;
  		}
 
  		p.next = new IntNode(x, null);
  	}
+
+ 	/*public void addLast(int x){
+ 		if(sentinel.next == null){
+ 			sentinel.next = x;
+		}
+		SLList p = sentinel.next;
+
+	}*/
+
  	
  	/** Returns the size of the list. */
  	public int size() {
@@ -66,6 +75,7 @@ public class SLList {
 	public static void main(String[] args) {
  		/* Creates a list of one integer, namely 10 */
  		SLList L = new SLList();
+ 		L.addFirst(15);
  		L.addLast(20);
  		System.out.println(L.size());
  	}
