@@ -45,14 +45,21 @@ public class Dog{
 		System.out.println("The max dog is second dog");
 		return d2;
 	
-
-	
-	
-	
-	
 	
 	
 	}
 	
+	/**
+	public static Dog maxDog(Dog d1, Dog d2){				//Static method
+		if (WeightInPounds > d2.WeightInPounds){
+			//System.out.println("The max dog is first dog");
+			return this;
+		}
+		//System.out.println("The max dog is second dog");
+		return d2;
 	
+	
+	
+	}
+	*/
 }

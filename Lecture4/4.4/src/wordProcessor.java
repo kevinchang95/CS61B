@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class wordProcessor {
 
@@ -46,6 +43,23 @@ public class wordProcessor {
 
     }
 
+
+    public static Map<String,Integer> collectWorldCount(List<String> target, List<String> words){
+
+        Map<String,Integer> counts = new HashMap<>();
+        for (String t :target){
+
+            counts.put(t,0);
+        }
+        for (String w:words){
+            if(counts.containsKey(w)){
+
+                counts.put(w, counts.get(w)+1);
+            }
+        }
+        return counts;
+    }
+
     public static void main(String[] args) {
 
         String inputFileName = "README.md";
@@ -57,7 +71,14 @@ public class wordProcessor {
         int count = countUniqueWords(words);
         System.out.println("There are " + count+" unique words");
 
+        Set<String> uWords = new HashSet<>(words);
+        System.out.println(uWords.size());
 
+        List<String> targets = new ArrayList<>();
+        targets.add("kevin");
+        targets.add("horse");
+        targets.add("branch");
+        System.out.println(collectWorldCount(targets,words));
 
     }
 
