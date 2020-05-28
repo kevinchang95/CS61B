@@ -42,4 +42,5 @@ public class VengefulSLList<datatype> extends SLList<datatype> {
         m.print();
     }
 
+
 }
