@@ -101,10 +101,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1587790187543">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588050677198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587790187543" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588050677198" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587793180703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -153,13 +153,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1587793180700" />
+    <state x="439" y="111" key="NewModule_or_Project.wizard" timestamp="1588050694001">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="439" y="111" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1588050694001" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1587791511577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587791511577" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587790118462">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588050630308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587790118462" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588050630308" />
   </component>
 </project>
