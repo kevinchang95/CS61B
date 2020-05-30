@@ -18,6 +18,9 @@ public class testSort {
         int cmp = Sort.findSmallest(input,0);
         org.junit.Assert.assertEquals(expected,cmp);
 
+        int expected_2 = 3;
+        int cmp_2 = Sort.findSmallest(input,3);
+        org.junit.Assert.assertEquals(expected_2,cmp_2);
 
     }
     @org.junit.Test
