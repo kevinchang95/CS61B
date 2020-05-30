@@ -5,6 +5,7 @@ public class ArrayDeque<T> {
     int nextLast;
     int size;
 
+    /**Empty ArrayDeque Constructor*/
     public ArrayDeque(){
 
         items = (T[]) new Object[8];
@@ -12,6 +13,25 @@ public class ArrayDeque<T> {
         nextFirst = 0;
         nextLast = 1;
     }
+
+    /**ArrayDeque Constructor that do direct copy*/
+
+    public ArrayDeque(ArrayDeque other){
+
+        items = (T[]) new Object[other.items.length];
+
+        for(int i = 0; i < other.size(); i++){
+
+            items[i] = (T) other.get(i);
+
+        }
+
+        nextFirst = items.length - 1;
+        nextLast = plusOne(other.size() - 1);
+
+    }
+
+
 
     private void sizeup(){
 
@@ -149,7 +169,34 @@ public class ArrayDeque<T> {
 
 
 
-    
+    public T get (int index){
+
+        int i = (nextFirst + 1 + index) % items.length;
+        return (items[i]);
+
+
+    }
+
+    public int size(){
+
+        return size;
+
+    }
+
+    public void printDeque(){
+
+        int j = plusOne(nextFirst);
+
+        for(int i = 0; i < size; i++){
+
+            System.out.print(items[j] + " ");
+            j = plusOne(j);
+
+        }
+
+        System.out.println();
+
+    }
 
     public static void main(String[] args){
 
@@ -174,6 +221,7 @@ public class ArrayDeque<T> {
         aList1.addFirst(3);
         aList1.addFirst(2);
         aList1.addFirst(1);
+        ArrayDeque aList2 = new ArrayDeque(aList1);
         aList1.addFirst(0);
         aList1.addFirst(-1);
         aList1.addFirst(-2);
@@ -193,6 +241,9 @@ public class ArrayDeque<T> {
         aList1.addFirst(-7);
         aList1.addFirst(-8);
         aList1.addFirst(-9);
+
+        aList1.printDeque();
+
     }
 
 }
