@@ -15,20 +15,20 @@ public class ArrayDeque<T> {
 
     private void sizeup(){
 
-        resize(size * 2);
+        resize(items.length * 2);
 
     }
 
     private void sizedown(){
 
-        resize(size / 2);
+        resize(items.length / 2);
 
     }
 
-    private void resize(int capacity){
+   /* private void resize(int capacity){
 
-        /*if(nextLast == 0) nextFirst = 1;
-        if(nextFirst == 1) nextLast = 0;*/
+        *//*if(nextLast == 0) nextFirst = 1;
+        if(nextFirst == 1) nextLast = 0;*//*
 
         int oldLen = items.length;
 
@@ -47,7 +47,30 @@ public class ArrayDeque<T> {
 
         }
 
+    }*/
+
+
+    private void resize(int capacity){
+
+        T[] a = (T[]) new Object[capacity];
+        int start = plusOne(nextFirst);
+        int end = minusOne(nextLast);
+        int j = start;
+
+        for(int i = 0; i < size; i ++){
+
+            a[i] = items[j];
+            j = plusOne(j);
+
+        }
+
+        items = a;
+        nextFirst = a.length - 1;
+        nextLast = size;
+
+
     }
+
 
     public int plusOne(int index){
 
@@ -124,6 +147,10 @@ public class ArrayDeque<T> {
 
     }
 
+
+
+    
+
     public static void main(String[] args){
 
         ArrayDeque<Integer> aList1 = new ArrayDeque<>();
@@ -150,6 +177,7 @@ public class ArrayDeque<T> {
         aList1.addFirst(0);
         aList1.addFirst(-1);
         aList1.addFirst(-2);
+        aList1.removeLast();
         aList1.removeLast();
         aList1.removeLast();
         aList1.removeLast();
