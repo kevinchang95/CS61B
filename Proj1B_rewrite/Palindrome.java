@@ -14,7 +14,7 @@ public class Palindrome {
         return d;
     }
 
-    public boolean isPalindrome(String word){
+    /*public boolean isPalindrome(String word){
 
 
         Deque d = wordToDeque(word);
@@ -28,7 +28,23 @@ public class Palindrome {
         }
 
         return false;
+    }*/
 
+
+    public boolean isPalindrome(String word){
+
+        Deque d = wordToDeque(word);
+        return isPalindrome(d);
+
+    }
+
+    private boolean isPalindrome(Deque d){
+
+        if(d.size() <= 1)return true;
+        while(d.removeFirst() == d.removeLast()) {
+            return(isPalindrome(d));
+        }
+        return false;
     }
 
 
