@@ -47,5 +47,43 @@ public class Palindrome {
         return false;
     }
 
+    /**isPalidrome,use CharacterComparator and Array (No Deque)*/
+   /* public boolean isPalindrome(String word, CharacterComparator cc){
+
+        char[] letterArray = word.toCharArray();
+        //Deque d = wordToDeque(word);
+        if(letterArray.length <= 1){return true;}
+
+        int front = 0;
+        int back = letterArray.length - 1;
+        int size = letterArray.length;
+        while(cc.equalChars(letterArray[front],letterArray[back]) == true){
+
+            front = front + 1;
+            back = back - 1;
+            size = size - 2;
+            if(size <= 1){return true;}
+
+        }
+
+
+        return false;
+
+    }*/
+
+    public boolean isPalindrome(String word, CharacterComparator cc) {
+
+        //char[] letterArray = word.toCharArray();
+        Deque d = wordToDeque(word);
+        if(d.size() <=1){return true;}
+        while(cc.equalChars((Character)d.removeFirst(),(Character)d.removeLast())){
+
+            if(d.size() <= 1)return true;
+
+        }
+
+        return false;
+
+    }
 
 }
