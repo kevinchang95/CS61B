@@ -12,10 +12,24 @@ public class Palindrome {
         }
 
         return d;
-
-
     }
 
+    public boolean isPalindrome(String word){
+
+
+        Deque d = wordToDeque(word);
+
+        if(d.size() <= 1)return true;
+
+        while(d.removeFirst() == d.removeLast()){
+
+            if(d.size() <= 1)return true;
+
+        }
+
+        return false;
+
+    }
 
 
 }

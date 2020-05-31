@@ -132,6 +132,8 @@ public class ArrayDeque<T> implements Deque<T>{
 
     @Override
     public T removeFirst(){
+
+        if(size == 0)return null;
         double userRatio = (double) size / (double) items.length;
         if(userRatio < 0.25 && items.length > 8){
 
@@ -149,6 +151,8 @@ public class ArrayDeque<T> implements Deque<T>{
     }
     @Override
     public T removeLast(){
+
+        if(size == 0)return null;
         double userRatio = (double) size / (double) items.length;
         if( userRatio < 0.25 && items.length > 8){
 
