@@ -56,10 +56,32 @@ public class TestPalindrome {
         assertFalse(palindrome.isPalindrome(npa2,offByOne));
     }
 
+    @Test
+    public void testisPalindrome_OffByN(){
+
+        String pa1 = "unzip";
+        String pa2 = "sworn";
+        String pa3 = "a";
+        String pa4 = "";
+        String npa1 = "fate";
+        String npa2 = "radecar";
+        String npa3 = "unilateral";
+        /**This still works since charequal is overridden*/
+//        CharacterComparator offByOne = new OffByOne();
+        //OffByOne offByOne = new OffByOne();
+        CharacterComparator offByN = new OffByN(5);
+        assertTrue(palindrome.isPalindrome(pa1,offByN));
+        assertTrue(palindrome.isPalindrome(pa2,offByN));
+        assertTrue(palindrome.isPalindrome(pa3,offByN));
+        assertTrue(palindrome.isPalindrome(pa4,offByN));
+        assertFalse(palindrome.isPalindrome(npa1,offByN));
+        assertFalse(palindrome.isPalindrome(npa2,offByN));
+    }
+
 
     @Test
     public void testequalChars(){
-        OffByOne offByOne = new OffByOne();
+        CharacterComparator offByOne = new OffByOne();
 
         assertTrue(offByOne.equalChars('a','b'));
         assertTrue(offByOne.equalChars('b','a'));
