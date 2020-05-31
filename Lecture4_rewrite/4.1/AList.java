@@ -13,7 +13,7 @@ public class AList<T> implements List61B<T>{
         size = 0;
 
     }
-
+    @Override
     public void addFirst(T x){
         if(size == items.length){
             resize(size * size);
@@ -30,7 +30,7 @@ public class AList<T> implements List61B<T>{
         size = size + 1;
 
     }
-
+    @Override
     public T getFirst(){
 
         return items[0];
@@ -38,7 +38,7 @@ public class AList<T> implements List61B<T>{
 
     }
 
-
+    @Override
     /** Inserts X into the back of the list. */
     public void addLast(T x) {
         if(size == items.length){
@@ -57,25 +57,25 @@ public class AList<T> implements List61B<T>{
         items = a;
 
     }
-
+    @Override
     /** Returns the item from the back of the list. */
     public T getLast() {
 
 
         return items[size - 1];
     }
-
+    @Override
     /** Gets the ith item in the list (0 is the front). */
     public T get(int i) {
 
         return items[i];
     }
-
+    @Override
     /** Returns the number of items in the list. */
     public int size() {
         return size;
     }
-
+    @Override
     /** Deletes item from back of the list and
       * returns deleted item. */
     public T removeLast() {
@@ -84,7 +84,7 @@ public class AList<T> implements List61B<T>{
         size = size - 1;
         return l;
     }
-
+    @Override
     public void insert(T item, int position){
 
         if(position >= size){addLast(item);}

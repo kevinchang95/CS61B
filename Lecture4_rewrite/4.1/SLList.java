@@ -32,18 +32,18 @@ public class SLList<T> implements List61B<T>{
 		sentinel.next = new IntNode(x, null);
 		size = 1;
 	}
-
+	 @Override
  	/** Adds x to the front of the list. */
  	public void addFirst(T x) {
  		sentinel.next = new IntNode(x, sentinel.next);
  		size = size + 1;
  	}
-
+	 @Override
  	/** Returns the first item in the list. */
  	public T getFirst() {
  		return (T)sentinel.next.item;
  	}
-
+	 @Override
  	public T getLast(){
 
 		IntNode p = sentinel;
@@ -56,7 +56,7 @@ public class SLList<T> implements List61B<T>{
  		return (T)p.item;
 
  	}
-
+	 @Override
 	public void insert(T item, int position){
 
  		IntNode newNode = new IntNode(item,null);
@@ -74,7 +74,7 @@ public class SLList<T> implements List61B<T>{
  		p.next = newNode;
 
 	}
-
+	 @Override
 	public T get(int index){
 
  		if(index > size - 1){
@@ -94,7 +94,7 @@ public class SLList<T> implements List61B<T>{
  		return (T)p.item;
 
 	}
-
+	 @Override
  	/** Adds x to the end of the list. */
  	public void addLast(T x) {
  		size = size + 1; 		
@@ -116,20 +116,21 @@ public class SLList<T> implements List61B<T>{
 		SLList p = sentinel.next;
 
 	}*/
-
+	@Override
  	public T removeLast(){
 
  		return null;
 
 	}
 
-
+	 @Override
  	/** Returns the size of the list. */
  	public int size() {
  		return size;
  	}
 
- 	public void printList(){
+ 	@Override
+ 	public void print(){
 
  		IntNode p = sentinel.next;
 
@@ -151,14 +152,14 @@ public class SLList<T> implements List61B<T>{
  		L.addLast("a");
  		L.addLast("Dog");
  		System.out.println(L.size());
- 		L.printList();
+ 		L.print();
  		L.insert("Big",3);
 		String Last = L.removeLast();
  		SLList<String> L1 = new SLList<>();
 
  		String Last1 = L.get(0);
 		System.out.println(Last1);
-		L.printList();
+		L.print();
 
  	}
 }
