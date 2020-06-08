@@ -1,3 +1,4 @@
+import java.util.Comparator;
 public class Maximizer {
 	/*public static Object max(Object[] items) {
 		int maxDex = 0;
@@ -54,6 +55,26 @@ public class Maximizer {
 
 	}
 
+	public static Comparable max(Comparable[] items,Comparator com){
+
+		Comparable maxObject = items[0];
+
+		for(Comparable item: items){
+
+			if(com.compare(maxObject,item) < 0){
+
+				maxObject = item;
+
+
+			}
+
+		}
+
+		return maxObject;
+
+
+
+	}
 
 
 } 

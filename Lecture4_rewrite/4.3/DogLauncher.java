@@ -22,5 +22,12 @@ public class DogLauncher {
 
         }else d2.bark();
 
+
+        Dog largestNameDog = (Dog)Maximizer.max(dogs,nameCompare);
+        Dog largestSizeDog = (Dog)Maximizer.max(dogs,sizeCompare);
+
+        largestNameDog.bark();
+        largestSizeDog.bark();
+
     }
 }
