@@ -30,6 +30,7 @@ public class Plip extends Creature {
      */
     private int b;
 
+
     /**
      * creates plip with energy equal to E.
      */
@@ -57,9 +58,20 @@ public class Plip extends Creature {
      * that you get this exactly correct.
      */
     public Color color() {
-        g = 63;
+        r =99;
+        b = 76;
+        g = 63 + (int)(96 * energy);
         return color(r, g, b);
     }
+
+    /**No need! Since name defined in constructor and name()method is implemented*/
+   /* public String name(){
+
+        return("pilp");
+
+    }
+*/
+
 
     /**
      * Do nothing with C, Plips are pacifists.
@@ -75,6 +87,10 @@ public class Plip extends Creature {
      */
     public void move() {
         // TODO
+
+        energy -= 0.15;
+        energyCheck();
+
     }
 
 
@@ -83,7 +99,21 @@ public class Plip extends Creature {
      */
     public void stay() {
         // TODO
+
+        energy += 0.2;
+        energyCheck();
+
     }
+
+    private void energyCheck(){
+
+        if(energy > 2) energy = 2;
+        if(energy < 0) energy = 0;
+    }
+
+
+
+
 
     /**
      * Plips and their offspring each get 50% of the energy, with none
@@ -91,7 +121,13 @@ public class Plip extends Creature {
      * Plip.
      */
     public Plip replicate() {
-        return this;
+
+        energy = 0.5 * energy;
+
+        Plip babyPlip = new Plip(energy);
+
+        return babyPlip;
+
     }
 
     /**
@@ -115,8 +151,22 @@ public class Plip extends Creature {
         // (Google: Enhanced for-loop over keys of NEIGHBORS?)
         // for () {...}
 
-        if (false) { // FIXME
+        for (Map.Entry<Direction, Occupant> entry : neighbors.entrySet()) {
+            if(entry.getValue().getClass().getName() == "Empty"){
+
+                emptyNeighbors.add(entry.getKey());
+
+            }
+        }
+
+        if (emptyNeighbors.size() == 0) { // FIXME
             // TODO
+            return new Action(Action.ActionType.STAY);
+        }
+
+        else if(energy >= 1.0){
+
+
         }
 
         // Rule 2
