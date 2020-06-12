@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * An implementation of a motile pacifist photosynthesizer.
@@ -146,35 +147,75 @@ public class Plip extends Creature {
     public Action chooseAction(Map<Direction, Occupant> neighbors) {
         // Rule 1
         Deque<Direction> emptyNeighbors = new ArrayDeque<>();
+        Deque<Direction> occupantNeighbors = new ArrayDeque<>();
         boolean anyClorus = false;
         // TODO
         // (Google: Enhanced for-loop over keys of NEIGHBORS?)
         // for () {...}
 
         for (Map.Entry<Direction, Occupant> entry : neighbors.entrySet()) {
-            if(entry.getValue().getClass().getName() == "Empty"){
-
+//            String className = entry.getValue().getClass().getName();
+            String occupantName = entry.getValue().name();
+            if( occupantName == "empty"){
                 emptyNeighbors.add(entry.getKey());
+            }
+            else{
+                occupantNeighbors.add(entry.getKey());
 
             }
         }
 
+        /**If no empty spaces, Plip chooses to stay*/
         if (emptyNeighbors.size() == 0) { // FIXME
             // TODO
+            stay();
             return new Action(Action.ActionType.STAY);
-        }
-
-        else if(energy >= 1.0){
-
-
         }
 
         // Rule 2
         // HINT: randomEntry(emptyNeighbors)
 
+        else if(energy >= 1.0){
+
+            Direction repDir = getRandomElement(emptyNeighbors);
+
+            replicate();
+
+            return new Action(Action.ActionType.REPLICATE, repDir);
+
+        }
+
         // Rule 3
+        double moveProbabilities = 0.5;
+        for(Direction neighborDir : occupantNeighbors){
+
+            if(neighbors.get(neighborDir).name() == "clorus"){
+                anyClorus = true;
+                break;
+            }
+
+        }
+
+        if(anyClorus && Math.random() < moveProbabilities){
+
+            Direction repDir = getRandomElement(emptyNeighbors);
+            return new Action(Action.ActionType.MOVE,repDir);
+
+        }
 
         // Rule 4
         return new Action(Action.ActionType.STAY);
     }
+
+    // Function select an element base on index
+    // and return an element
+    private <T> T getRandomElement(Deque<T> deque)
+    {
+        T[] list = (T[])deque.toArray();
+        Random rand = new Random();
+        return list[rand.nextInt(list.length)];
+    }
+
+
+
 }
