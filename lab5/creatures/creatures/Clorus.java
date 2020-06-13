@@ -73,24 +73,88 @@ public class Clorus extends Creature{
 
     public Clorus replicate(){
 
-        return null;
+        energy = 0.5 * energy;
+
+        Clorus babyClorus = new Clorus(energy);
+
+        return babyClorus;
 
     }
 
     public void attack(Creature c){
 
-
+        energy += c.energy();
 
 
     }
 
     public Action chooseAction(Map<Direction,Occupant> neighbors){
 
+        Deque<Direction> emptyNeighbors = new ArrayDeque<>();
+        Deque<Direction> occupantNeighbors = new ArrayDeque<>();
+        Deque<Direction> plipNeighbors = new ArrayDeque<>();
+        for(Map.Entry<Direction,Occupant> entry: neighbors.entrySet()){
 
-        return null;
+            String occupantName = entry.getValue().name();
+            if(occupantName == "empty"){
+
+                emptyNeighbors.add(entry.getKey());
+            }
+            else {
+
+                occupantNeighbors.add(entry.getKey());
+
+                if (occupantName == "plip") {
+
+                    plipNeighbors.add(entry.getKey());
+                }
+
+            }
+        }
+
+
+        //Rule1: if no empty space, clorus will STAY.
+
+        if(emptyNeighbors.size() == 0){
+
+            stay();
+            return new Action(Action.ActionType.STAY);
+
+        }
+        else if(plipNeighbors.size() != 0){
+
+            Direction plipDirec = getRandomElement(plipNeighbors);
+            Plip targetPlip = (Plip)neighbors.get(plipDirec);
+            attack(targetPlip);
+
+            return new Action(Action.ActionType.ATTACK,plipDirec);
+        }
+        else if(energy >= 1.0){
+
+            Direction repDirec = getRandomElement(emptyNeighbors);
+            replicate();
+
+            return new Action(Action.ActionType.REPLICATE,repDirec);
+
+        }
+
+
+        Direction movDirec = getRandomElement(emptyNeighbors);
+        move();
+        return new Action(Action.ActionType.MOVE,movDirec);
+
 
     }
 
+
+    private <T> T getRandomElement(Deque<T> deque)
+    {
+        T[] list = (T[])deque.toArray();
+        Random rand = new Random();
+        int ranIndex = rand.nextInt(list.length);
+        return list[ranIndex];
+
+    }
 
 
 }

@@ -86,7 +86,7 @@ public class TestPlip {
 //        actual = p.chooseAction(allEmpty);
         Action unexpected = new Action(Action.ActionType.STAY);
 
-        assertNotEquals(unexpected, actual);
+//        assertNotEquals(unexpected, actual);
 
 
         // Energy < 1; stay.

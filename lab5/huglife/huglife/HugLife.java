@@ -24,7 +24,7 @@ public class HugLife {
      * Time in milliseconds between simulation steps.
      * Reduce to make things run faster.
      */
-    public static final int PAUSE_TIME_PER_SIMSTEP = 5000;
+    public static final int PAUSE_TIME_PER_SIMSTEP = 2000;
 
     /**
      * If true, the HugLifeAnimator class saves an image after every cycle.
@@ -131,10 +131,10 @@ public class HugLife {
             int x = in.readInt();
             int y = in.readInt();
             switch (creature) {
-                //Uncomment this when you're ready to test out your clorus class
-                //case "clorus":
-                //    h.addCreature(x, y, new Clorus(1));
-                //    break;
+                /**Uncomment this when you're ready to test out your clorus class*/
+                case "clorus":
+                    h.addCreature(x, y, new Clorus(1));
+                    break;
                 case "plip":
                     h.addCreature(x, y, new Plip());
                     break;
