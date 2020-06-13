@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -131,8 +131,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JUnit.TestClorus.testChooseReplicate" />
       <item itemvalue="JUnit.TestClorus.testAttack" />
+      <item itemvalue="JUnit.TestClorus.testChooseReplicate" />
       <item itemvalue="JUnit.TestClorus.testReplicate" />
       <item itemvalue="JUnit.TestClorus.testStay" />
       <item itemvalue="JUnit.TestPlip.testChoose" />
@@ -240,14 +240,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="271" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1592023636788" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1591886879592">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1592061993036">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591886879592" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591996980945">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592061993036" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592061801070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591996980945" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592061801070" />
     <state x="537" y="74" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592001762060">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
