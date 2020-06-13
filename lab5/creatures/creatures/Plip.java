@@ -198,9 +198,9 @@ public class Plip extends Creature {
 
         if(anyClorus && Math.random() < moveProbabilities){
 
-            Direction repDir = getRandomElement(emptyNeighbors);
+            Direction movDir = getRandomElement(emptyNeighbors);
             move();
-            return new Action(Action.ActionType.MOVE,repDir);
+            return new Action(Action.ActionType.MOVE,movDir);
 
         }
 

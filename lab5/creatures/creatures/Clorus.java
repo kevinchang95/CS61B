@@ -56,13 +56,13 @@ public class Clorus extends Creature{
     public void move(){
 
         energy -= 0.03;
-        energyCheck();
+        //energyCheck();
     }
 
     public void stay(){
 
         energy -= 0.01;
-        energyCheck();
+        //energyCheck();
     }
 
     private void energyCheck(){
