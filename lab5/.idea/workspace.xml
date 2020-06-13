@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -33,11 +40,11 @@
       <recent name="G:\Coding\CS61B\lab5\huglife" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPlip.testChoose">
+  <component name="RunManager" selected="JUnit.TestClorus.testEnergy">
     <configuration name="HugLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="huglife.HugLife" />
       <module name="lab5" />
-      <option name="PROGRAM_PARAMETERS" value="samplesolo" />
+      <option name="PROGRAM_PARAMETERS" value="sampleplip" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value=".*" />
@@ -48,7 +55,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlip.testBasics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClorus.testColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab5" />
       <extension name="coverage">
         <pattern>
@@ -57,8 +64,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="creatures" />
-      <option name="MAIN_CLASS_NAME" value="creatures.TestPlip" />
-      <option name="METHOD_NAME" value="testBasics" />
+      <option name="MAIN_CLASS_NAME" value="creatures.TestClorus" />
+      <option name="METHOD_NAME" value="testColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClorus.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="creatures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="creatures" />
+      <option name="MAIN_CLASS_NAME" value="creatures.TestClorus" />
+      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClorus.testEnergy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="creatures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="creatures" />
+      <option name="MAIN_CLASS_NAME" value="creatures.TestClorus" />
+      <option name="METHOD_NAME" value="testEnergy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,34 +119,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlip.testReplicate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="creatures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="creatures" />
-      <option name="MAIN_CLASS_NAME" value="creatures.TestPlip" />
-      <option name="METHOD_NAME" value="testReplicate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.HugLife" />
-      <item itemvalue="JUnit.TestPlip.testBasics" />
-      <item itemvalue="JUnit.TestPlip.testReplicate" />
       <item itemvalue="JUnit.TestPlip.testChoose" />
+      <item itemvalue="JUnit.TestClorus.testConstructor" />
+      <item itemvalue="JUnit.TestClorus.testColor" />
+      <item itemvalue="JUnit.TestClorus.testEnergy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPlip.testChoose" />
-        <item itemvalue="JUnit.TestPlip.testReplicate" />
-        <item itemvalue="JUnit.TestPlip.testBasics" />
+        <item itemvalue="JUnit.TestClorus.testEnergy" />
+        <item itemvalue="JUnit.TestClorus.testColor" />
+        <item itemvalue="JUnit.TestClorus.testConstructor" />
         <item itemvalue="Application.HugLife" />
+        <item itemvalue="JUnit.TestPlip.testChoose" />
       </list>
     </recent_temporary>
   </component>
@@ -141,10 +166,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="73" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1591841809915" />
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591887017055">
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592002182113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1591887017055" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592002182113" />
     <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591841679676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -157,54 +182,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="132" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591841967344" />
-    <state width="1493" height="271" key="GridCell.Tab.0.bottom" timestamp="1592002053362">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1592014866985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.0.center" timestamp="1592002053362">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592014866985" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1592014866985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.0.left" timestamp="1592002053362">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592014866985" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1592014866985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.0.right" timestamp="1592002053362">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592014866985" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1592014866985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.1.bottom" timestamp="1592002053362">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592014866985" />
+    <state width="1493" height="271" key="GridCell.Tab.1.bottom" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.1.center" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
+    <state width="1493" height="271" key="GridCell.Tab.1.center" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.1.left" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
+    <state width="1493" height="271" key="GridCell.Tab.1.left" timestamp="1592003328351">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.1.right" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592003328351" />
+    <state width="1493" height="271" key="GridCell.Tab.1.right" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.2.bottom" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
+    <state width="1493" height="271" key="GridCell.Tab.2.bottom" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.2.center" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
+    <state width="1493" height="271" key="GridCell.Tab.2.center" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.2.left" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
+    <state width="1493" height="271" key="GridCell.Tab.2.left" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
-    <state width="1493" height="271" key="GridCell.Tab.2.right" timestamp="1592002053362">
+    <state width="1493" height="271" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
+    <state width="1493" height="271" key="GridCell.Tab.2.right" timestamp="1592003328352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="271" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1592002053362" />
+    <state width="1493" height="271" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1592003328352" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1591886879592">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -223,8 +248,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/creatures/creatures/TestPlip.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="2" />
+          <line>84</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

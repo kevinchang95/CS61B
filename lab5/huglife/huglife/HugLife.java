@@ -24,7 +24,7 @@ public class HugLife {
      * Time in milliseconds between simulation steps.
      * Reduce to make things run faster.
      */
-    public static final int PAUSE_TIME_PER_SIMSTEP = 100;
+    public static final int PAUSE_TIME_PER_SIMSTEP = 5000;
 
     /**
      * If true, the HugLifeAnimator class saves an image after every cycle.

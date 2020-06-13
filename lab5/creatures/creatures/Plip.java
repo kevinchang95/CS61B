@@ -199,11 +199,13 @@ public class Plip extends Creature {
         if(anyClorus && Math.random() < moveProbabilities){
 
             Direction repDir = getRandomElement(emptyNeighbors);
+            move();
             return new Action(Action.ActionType.MOVE,repDir);
 
         }
 
         // Rule 4
+        stay();
         return new Action(Action.ActionType.STAY);
     }
 
@@ -213,7 +215,9 @@ public class Plip extends Creature {
     {
         T[] list = (T[])deque.toArray();
         Random rand = new Random();
-        return list[rand.nextInt(list.length)];
+        int ranIndex = rand.nextInt(list.length);
+        return list[ranIndex];
+
     }
 
 

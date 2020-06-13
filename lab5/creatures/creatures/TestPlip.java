@@ -75,7 +75,7 @@ public class TestPlip {
 
 
         // Energy >= 1; replicate towards an empty space.
-        p = new Plip(1.2);
+        p = new Plip(0.6);
         HashMap<Direction, Occupant> allEmpty = new HashMap<Direction, Occupant>();
         allEmpty.put(Direction.TOP, new Empty());
         allEmpty.put(Direction.BOTTOM, new Empty());
@@ -83,6 +83,7 @@ public class TestPlip {
         allEmpty.put(Direction.RIGHT, new Empty());
 
         actual = p.chooseAction(allEmpty);
+//        actual = p.chooseAction(allEmpty);
         Action unexpected = new Action(Action.ActionType.STAY);
 
         assertNotEquals(unexpected, actual);
