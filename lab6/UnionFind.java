@@ -79,10 +79,15 @@ public class UnionFind{
     public void union(int v1, int v2) {
         // TODO
 
+
+        validate(v1);
+        validate(v2);
+
         int root1 = find(v1);
         int root2 = find(v2);
-        
+
         if(v1 == v2) return;
+        if(root1 == root2)return;
 
         int size1 = size(v1);
         int size2 = size(v2);

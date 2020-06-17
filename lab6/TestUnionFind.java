@@ -26,7 +26,7 @@ public class TestUnionFind {
         assertEquals(2,uf.sizeOf(4));
         assertEquals(1,uf.sizeOf(1));
         uf.union(4,2);
-        assertEquals(3,uf.sizeOf(4));
+        assertEquals(2,uf.sizeOf(4));
 
 
     }
